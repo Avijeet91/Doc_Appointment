@@ -61,7 +61,10 @@ function AdminManageUser() {
         <div>
             <Navbar />
             <br/>
-            <h3>ALL DOCTOR DETAILS</h3>
+            <h3 style={{ 
+            textAlign: "center", 
+            marginTop: "20px" 
+        }}>ALL DOCTOR DETAILS</h3>
 
             <b style={{ color: "red" }}>{msg}</b>
 

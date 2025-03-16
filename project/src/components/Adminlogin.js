@@ -34,15 +34,27 @@ function Adminlogin(){
         <div>
         <Navbar/>
             {/*<h3 style={{color: 'red'}}>Admin Login</h3>*/}
+
+            <div
+  style={{
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    textAlign: "center",
+    width: "90%",
+  }}
+>
             <h4 style={{color: 'blue'}}>{msg}</h4>
             <form onSubmit={executeSubmit} className="form-element">
             {/*Add valuen and onchange*/}
-            <h3 style={{color: 'red'}}>Admin Login</h3>
+            <h3 style={{color: 'red',textAlign:"center"}}>Admin Login</h3>
                 <input type='text' placeholder="Enter user ID" value={adminid} onChange={(e)=> setAdminId(e.target.value)}/><br/><br/>
                 <input type='password' placeholder="Enter Password" value={adminpass} onChange={(e)=> setAdminPass(e.target.value)}/><br/><br/>
                 <input type='submit'/>
                 <br/><br/><br/><br/>
             </form>
+            </div>
         </div>
     )
 }

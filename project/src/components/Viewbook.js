@@ -36,7 +36,10 @@ function AdminViewUser() {
         <div>
             <Navbar />
             <br />
-            <h3>Appoinment List</h3>
+            <h3 style={{ 
+            textAlign: "center", 
+            marginTop: "20px" 
+        }}>Appoinment List</h3>
 
             <b style={{ color: "red" }}>{msg}</b>
 

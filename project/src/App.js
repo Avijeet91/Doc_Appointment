@@ -1,4 +1,5 @@
 import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
 import Reg from './components/Reg';
 import Contactus from './components/Contactus';
@@ -13,35 +14,36 @@ import Deldoc from './components/Deldoc';
 import Docbook from './components/Docbook';
 import Userhome from './components/Userhome';
 import Viewbook from './components/Viewbook';
-
-
-
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import Footer from './components/Footer';
 
 function App() {
   return (
-  <div align="center">
     <BrowserRouter>
-    {/*<Navbar/>*/}
-        <Routes>
-          <Route path='/' element={<Home />}/>
-          <Route path='/contactus' element={<Contactus />}/>
-          <Route path='/adminlogin' element={<Adminlogin />}/>
-          <Route path='/userlogin' element={<Userlogin />}/>
-          <Route path='/userlogout' element={<Userlogout/>}/>
-          <Route path='/deldoc' element={<Deldoc/>}/>
-          <Route path='/userReg' element={<Reg />}/>
-          <Route path='/userhome' element={<Userhome/>}/>
-          <Route path='/adminafterlogin' element={<Adminafterlogin />}/>
-          <Route path='/adminlogout' element={<Adminlogout />}/>
-          <Route path='/userlogout' element={<Adminlogout/>}/>
-          <Route path='/userafterlogin' element={<Userafterlogin />}/>
-          <Route path='/adddoc' element={<Adddoc/>}/>
-          <Route path='/docbook' element={<Docbook/>}/>
-          <Route path='/viewbook' element={<Viewbook/>}/>
-        </Routes> 
+      <div className="app-container">
+        {/* This ensures content expands properly */}
+        <div className="content">
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/contactus' element={<Contactus />} />
+            <Route path='/adminlogin' element={<Adminlogin />} />
+            <Route path='/userlogin' element={<Userlogin />} />
+            <Route path='/userlogout' element={<Userlogout />} />
+            <Route path='/deldoc' element={<Deldoc />} />
+            <Route path='/userReg' element={<Reg />} />
+            <Route path='/userhome' element={<Userhome />} />
+            <Route path='/adminafterlogin' element={<Adminafterlogin />} />
+            <Route path='/adminlogout' element={<Adminlogout />} />
+            <Route path='/userafterlogin' element={<Userafterlogin />} />
+            <Route path='/adddoc' element={<Adddoc />} />
+            <Route path='/docbook' element={<Docbook />} />
+            <Route path='/viewbook' element={<Viewbook />} />
+          </Routes>
+        </div>
+        
+        {/* Footer always stays at the bottom */}
+        <Footer />
+      </div>
     </BrowserRouter>
-  </div>
   );
 }
 

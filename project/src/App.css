@@ -1,7 +1,75 @@
+/* Center text by default */
 .App {
   text-align: center;
 }
 
+/* Center the form properly */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  width: 100%;
+}
+
+/* Style the form */
+.form-element {
+  width: 40%; /* Adjust form width */
+  max-width: 400px; /* Ensure it doesn't become too large */
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Make inputs smaller */
+.form-element input[type="text"],
+.form-element input[type="number"],
+.form-element input[type="radio"] {
+  width: 80%; /* Reduce width */
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Submit button */
+.form-element input[type="submit"] {
+  width: 85%;
+  padding: 8px;
+  background-color: #1a1a3d;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.form-element input[type="submit"]:hover {
+  background-color: #0f0f2d;
+}
+
+/* Gender field container */
+.gender-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Space between elements */
+  margin-top: 5px;
+}
+
+/* Ensure the radio buttons align properly */
+.gender-container label {
+  font-size: 14px;
+  margin-left: 3px;
+}
+
+
+
+/* Logo animation */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -13,6 +81,7 @@
   }
 }
 
+/* Fixed header styles */
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -24,10 +93,12 @@
   color: white;
 }
 
+/* Link styling */
 .App-link {
   color: #61dafb;
 }
 
+/* Logo spin animation */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +106,15 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* ✅ Fix Footer Positioning */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure full viewport height */
+}
+
+.content {
+  flex: 1; /* Pushes footer to the bottom */
 }

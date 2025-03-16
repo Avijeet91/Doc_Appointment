@@ -7,6 +7,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 code {
@@ -88,8 +89,9 @@ background-image: url('../src/bimage1.jpg'); // Adjust based on your structure
 button {
   margin-top: 15px;
   @include buttonStyle;
-  width: 50%;
-
+  width: 20%;
+  display: block; // Ensures it takes full width of the container
+  margin: 15px auto;
   &:hover {
     box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.5);
   }
@@ -105,6 +107,7 @@ textarea {
 
 h1,
 h3 {
+  align-content: center;
   font-family: cursive;
 }
 

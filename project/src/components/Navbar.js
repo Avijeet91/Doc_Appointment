@@ -1,59 +1,42 @@
-//Functional componet
-//Step 1- Import React
 import React from "react";
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
+import "./Navbar.css";
 
+function Navbar() {
+  let userType = sessionStorage.getItem("utype");
 
-//Step 2- Create functional component
-function Navbar(){
-    let usertype=sessionStorage.getItem('utype');
-    if (usertype==='ADMIN')
-    {
-        return(
-            <div className="NavBar">
-            <h1>Revo Clinic</h1>
-            <nav className="nav-elements">
-            <ul>
-            <li><Link to="/adminafterlogin">Admin Home</Link></li>
-            <li><Link to="/adddoc">Add Doctor</Link></li>
-            <li><Link to="/deldoc">Del/View Doctor</Link></li>
-            <li><Link to="/viewbook">View Appoinments</Link></li>
-            <li><Link to="/adminlogout">Logout </Link></li>
-            </ul>
-        </nav><br/><br/><br/>
-        </div>
-        );
-    }
-    else if(usertype==='USER'){
-    return(
-        <div className="NavBar">
-        <h1>Revo Clinic</h1>
-        <nav className="nav-elements">
-        <ul>
-            <li><Link to="/userhome">User Home</Link></li>
-            <li><Link to="/docbook">Book Appointment</Link></li>
-            <li><Link to="/userlogout">User Logout </Link></li>
-        </ul>
-        </nav><br/><br/><br/>
-        </div>
-    )
-    }
-    else{
-        return(
-            <div className="NavBar">
-            <h1>Revo Clinic</h1>
-            <nav className="nav-elements">
-            <ul>
-            <li><a><Link to="/">Home</Link></a></li>
-            <li><a><Link to="/contactus">Contact Us</Link></a></li>
-            <li><a><Link to="/adminlogin">Admin Login </Link></a></li>
-            </ul>
-        </nav><br/><br/><br/>
-        </div>
-        );
-    }
-
-
+  return (
+    <header className="navbar">
+      <div className="navbar-container">
+        <h1 className="logo">Revo Clinic</h1>
+        <nav>
+          <ul className="nav-links">
+            {userType === "ADMIN" ? (
+              <>
+                <li><Link to="/adminafterlogin">Dashboard</Link></li>
+                <li><Link to="/adddoc">Add Doctor</Link></li>
+                <li><Link to="/deldoc">Manage Doctors</Link></li>
+                <li><Link to="/viewbook">Appointments</Link></li>
+                <li className="logout"><Link to="/adminlogout">Logout</Link></li>
+              </>
+            ) : userType === "USER" ? (
+              <>
+                <li><Link to="/userhome">Home</Link></li>
+                <li><Link to="/docbook">Book Appointment</Link></li>
+                <li className="logout"><Link to="/userlogout">Logout</Link></li>
+              </>
+            ) : (
+              <>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/contactus">Contact Us</Link></li>
+                <li className="login"><Link to="/adminlogin">Admin Login</Link></li>
+              </>
+            )}
+          </ul>
+        </nav>
+      </div>
+    </header>
+  );
 }
-// Step 3- Export it to use it
+
 export default Navbar;
