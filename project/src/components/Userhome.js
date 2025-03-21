@@ -37,7 +37,7 @@ function AdminManageUser() {
                 <td>{currentrow.docqualification}</td>
                 <td>{currentrow.docfees}</td>
                 <td>
-                    <button onClick={() => handleBook(currentrow.docname)}>Book</button>
+                    <button onClick={() => handleBook(currentrow.docname)} style={{width:'100px'}}>Book</button>
                 </td>
             </tr>
         ));
@@ -46,7 +46,7 @@ function AdminManageUser() {
     return (
         <div>
             <Navbar />
-            <h3>Doctor List</h3>
+            <h3 style={{textAlign:'center'}}>Doctor List</h3>
             <b style={{ color: "red" }}>{msg}</b>
             <table border="1">
                 <thead>

@@ -10,6 +10,7 @@ function Docbook() {
     const location = useLocation();
     const [bdocname, setBDocName] = useState("");
     const [busername, setBUserName] = useState("");
+    //const [bdate, setDate] = useState("");
     const [bdate, setDate] = useState(new Date()); // Default to today
     const [error, setError] = useState("");
 
@@ -75,6 +76,7 @@ function Docbook() {
                     {/* <Calendar onChange={handleDateChange} value={bdate} /> }
                     <Calendar value={bdate} onChange={(e) => setDate(e.value)} inline showWeek />
                 </div> */}
+                
 
                 <div className="text-center">
                     {bdate ? `Your selected date: ${bdate.toDateString()}` : "No date selected"}

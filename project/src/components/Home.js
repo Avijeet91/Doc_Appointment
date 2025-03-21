@@ -12,10 +12,10 @@ function Home() {
 
   // Doctor details with imported images
   const doctors = [
-    { name: "Dr. John Doe", specialty: "Cardiologist", img: doctor1 },
-    { name: "Dr. Emily Smith", specialty: "Dermatologist", img: doctor1 },
-    { name: "Dr. Michael Brown", specialty: "Orthopedic", img: doctor1 },
-    { name: "Dr. Sarah Johnson", specialty: "Pediatrician", img: doctor1 },
+    { name: "Dr. Rohan Singh", specialty: "Cardiologist", img: doctor1 },
+    { name: "Dr. Nandini Thakur", specialty: "Dermatologist", img: doctor1 },
+    { name: "Dr. Shreya Ghosh", specialty: "Orthopedic", img: doctor1 },
+    { name: "Dr. Anil Verma", specialty: "Physician", img: doctor1 },
   ];
 
   return (
@@ -90,7 +90,7 @@ function Home() {
                   marginBottom: "10px",
                 }}
               />
-              <p style={{ fontSize: "14px", fontWeight: "bold", margin: "5px 0" }}>
+              <p style={{ fontSize: "14px", color:"white", fontWeight: "bold", margin: "5px 0" }}>
                 {doctor.name}
               </p>
               <p style={{ fontSize: "12px", color: "#ccc", margin: "0" }}>

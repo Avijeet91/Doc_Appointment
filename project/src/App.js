@@ -15,6 +15,8 @@ import Docbook from './components/Docbook';
 import Userhome from './components/Userhome';
 import Viewbook from './components/Viewbook';
 import Footer from './components/Footer';
+import AboutUs from './components/Aboutus';
+import PrivacyPolicy from './components/Privacy';
 
 function App() {
   return (
@@ -37,6 +39,8 @@ function App() {
             <Route path='/adddoc' element={<Adddoc />} />
             <Route path='/docbook' element={<Docbook />} />
             <Route path='/viewbook' element={<Viewbook />} />
+            <Route path='/aboutus' element={<AboutUs />}/>
+            <Route path='/privacy' element={<PrivacyPolicy />}/>
           </Routes>
         </div>
         

@@ -16,13 +16,13 @@ const Footer = () => {
     >
       <p>© {new Date().getFullYear()} Revo Clinic. All Rights Reserved.</p>
       <p>
-        <Link to="/about" style={{ color: "#ffffff", textDecoration: "none", marginRight: "15px" }}>
+        <Link to="./Aboutus" style={{ color: "#ffffff", textDecoration: "none", marginRight: "15px" }}>
           About Us
         </Link>
-        <Link to="/contact" style={{ color: "#ffffff", textDecoration: "none", marginRight: "15px" }}>
+        <Link to="./Contactus" style={{ color: "#ffffff", textDecoration: "none", marginRight: "15px" }}>
           Contact
         </Link>
-        <Link to="/privacy" style={{ color: "#ffffff", textDecoration: "none" }}>
+        <Link to="./privacy" style={{ color: "#ffffff", textDecoration: "none" }}>
           Privacy Policy
         </Link>
       </p>

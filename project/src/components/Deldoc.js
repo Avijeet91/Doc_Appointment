@@ -33,7 +33,7 @@ function AdminManageUser() {
                     <td>{currentrow.docqualification}</td>
                     <td>{currentrow.docfees}</td>
                     <td>
-                        <button onClick={() => removeRow(index)}>Delete</button>
+                        <button onClick={() => removeRow(index)} style={{width:'100px'}}>Delete</button>
                     </td>
                 </tr>
             );

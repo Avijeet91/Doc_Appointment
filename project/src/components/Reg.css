@@ -6,13 +6,14 @@
   justify-content: center;
   min-height: 80vh;
   width: 100%;
+  padding-left: 10px;
 }
 
 
 /* Form styling */
 .form-element {
     width: 100%;
-    max-width: 500px;
+    max-width: 450px;
     padding: 20px;
     background: #f9f9f9;
     border-radius: 8px;
@@ -23,7 +24,7 @@
 /* Input field styling */
 input, select, textarea {
     width: 90%;
-    padding: 10px;
+    padding: 5px;
     margin: 5px 0;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -45,11 +46,11 @@ input, select, textarea {
 .gender-container {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
 }
 
 .gender-container label {
-    margin-right: 10px;
+    margin-right: 100px;
 }
 
 /* Button styling */
